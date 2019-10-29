@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Quiz Questions And Answers</title>
+
+</head>
+
+<body>
+
+<center><h1>Quiz Questions</h1></center>
+
+<p>
+
+<form name="quiz">
+
+<p>
+
+<b>Question 1.
+
+<br>What is the capital of Missouri?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q1" value="A) Manitoba City">A) Manitoba City<br>
+
+<input type="radio" name="q1" value="B) CORRECT Jefferson City">B) Jefferson City<br>
+
+<input type="radio" name="q1" value="C) Roosewood City">C) Roosewood City<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 2.
+
+<br>How many ounces in a pound?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q2" value="A) 10">A) 10<br>
+
+<input type="radio" name="q2" value="B) 14">B) 14<br>
+
+<input type="radio" name="q2" value="C) 16">C) 16<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 3.
+
+<br>Who was the first person to set foot on the moon?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q3" value="A) Charles Babbage">A) Charles Babbage<br>
+
+<input type="radio" name="q3" value="B) Isaac Newton">B) Isaac Newton<br>
+
+<input type="radio" name="q3" value="C) Neil Armstrong">C) Neil Armstrong<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 4.
+
+<br>Who holds the Major League Baseball record for most home runs in a season?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q4" value="A) Barry Bonds">A) Barry Bonds<br>
+
+<input type="radio" name="q4" value="B) James Bonds">B) James Bonds<br>
+
+<input type="radio" name="q4" value="C) Jerry Bonds">C) Jerry Bonds<br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+Question 5.
+
+<br>In what year was University of Liverpool founded?<br></b>
+
+<blockquote>
+
+<input type="radio" name="q5" value="A) 1882">A) 1882<br>
+
+<input type="radio" name="q5" value="B) 1881">B) 1881<br>
+
+<input type="radio" name="q5" value="C) 1883">C) 1883<br>
+
+</blockquote>
+
+<p><b>
+
+<input type="button"value="Grade Me"onClick="getScore(this.form);">
+
+<input type="reset" value="Clear"><p>
+
+Number of score out of 5 = <input type= text size 5 name= "mark">
+
+Score in percentage = <input type=text size=5 name="percentage"><br>
+
+</form>
+
+<p>
+
+<form method="post" name="Form" onsubmit="" action="">
+
+</form>
+
+For answers scroll down :)
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		 1. B) Jefferson City<br/>
+		 2. C) 16<br/>
+		 3. C) Neil Armstrong<br/>
+		 4. A) Barry Bonds<br/>
+		 5. B) 1881<br/>
+		<br/>
+
+</body>
+
+<script>
+
+var numQues = 5;
+
+var numChoi = 3;
+
+var answers = new Array(5);
+
+answers[0] = "B) Jefferson City"; 
+
+answers[1] = "C) 16";
+
+answers[2] = "C) Neil Armstrong";
+
+answers[3] = "A) Barry Bonds";
+
+answers[4] = "B) 1881";
+
+function getScore(form) {
+
+var score = 0;
+
+var currElt;
+
+var currSelection;
+
+for (i=0; i<numQues; i++) {
+
+currElt = i*numChoi;
+
+answered=false;
+
+for (j=0; j<numChoi; j++) {
+
+currSelection = form.elements[currElt + j];
+
+if (currSelection.checked) {
+
+answered=true;
+
+if (currSelection.value == answers[i]) {
+
+score++;
+
+break;
+
+}
+
+}
+
+}
+
+if (answered ===false){alert("Do answer all the questions, Please") ;return false;}
+
+}
+
+var scoreper = Math.round(score/numQues*100);
+
+form.percentage.value = scoreper + "%";
+
+form.mark.value=score;
+
+}
+
+</script>
+
+</html>
