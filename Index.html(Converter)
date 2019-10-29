@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Currency Converter</title>
+</head>
+<body>
+	<h2>Welcome to currency converter</h2>
+	<br>
+	<div>
+		<form>
+			<div>
+				USD: <input type="text" name="usd">
+			</div>
+			
+			<div>
+				EUR: <input type="text" name="eur">
+			</div>
+			
+			<div>
+				GBP: <input type="text" name="gbp">
+			</div>
+			<br>
+			<input type="button" value="convert" onclick="currency()">
+		</form>
+	</div>
+	<br>
+	<div>
+		<form>
+			
+		</form>
+	</div>
+	<script src="currency.js"></script>
+</body>
+</html>
